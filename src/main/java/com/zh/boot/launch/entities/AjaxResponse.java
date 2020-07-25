@@ -17,4 +17,8 @@ public class AjaxResponse {
     public static AjaxResponse success(Object data) {
         return AjaxResponse.builder().code(200).isOk(true).message("成功").data(data).build();
     }
+
+    public static AjaxResponse success() {
+        return AjaxResponse.builder().code(200).isOk(true).message("成功").build();
+    }
 }
