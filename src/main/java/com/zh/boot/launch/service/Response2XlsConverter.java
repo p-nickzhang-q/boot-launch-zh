@@ -11,11 +11,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.AbstractHttpMessageConverter;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
-import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-@Service
+/**
+ * Converter处理request以及response数据
+ */
+//@Service
 public class Response2XlsConverter extends AbstractHttpMessageConverter<AjaxResponse> {
     private static final MediaType EXCEL_TYPE = MediaType.valueOf("application/vnd.ms-excel");
 

@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/articles")
 public class ArticleController {
 
+
     @PostMapping
-    public AjaxResponse save(@RequestBody Article article) {
+    public AjaxResponse saveArticle(@RequestBody Article article) {
         log.info("save:" + article);
         return AjaxResponse.success();
     }
