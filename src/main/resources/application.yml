@@ -5,23 +5,3 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-
-family:
-  family-name: "happy family"
-  father:
-    name: zimug
-    # 随机数
-    age: ${random.int}
-  mother:
-    alias:
-      - lovely
-      - ailice
-  child:
-    # 如果存在family.father.name，则值为family.father.name，如果没有则是zimug2
-    name: ${family.father.name:zimug2}
-    age: 5
-    friends:
-      - hobby: football
-        sex: male
-      - hobby: basketball
-        sex: female
