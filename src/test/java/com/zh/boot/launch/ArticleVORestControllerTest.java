@@ -13,7 +13,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 @Slf4j
-public class ArticleRestControllerTest {
+public class ArticleVORestControllerTest {
 
     private static MockMvc mockMvc;
 

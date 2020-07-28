@@ -1,38 +1,31 @@
 package com.zh.boot.launch.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
-/**
- * json数据排序
- */
-@JsonPropertyOrder(value = {})
+@Entity
+@Table(name = "boot_article")
 public class Article {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, length = 32)
     private String author;
+
+    @Column(nullable = false, unique = true, length = 32)
     private String title;
+
+    @Column(length = 512)
     private String content;
-    /**
-     * 忽略属性
-     */
-    @JsonIgnore
     private Long createTime;
-    /**
-     * 为null的话不返回
-     */
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private Set<Reader> readers;
 
 }
