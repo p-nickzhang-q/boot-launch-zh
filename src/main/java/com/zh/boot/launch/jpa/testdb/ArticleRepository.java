@@ -1,7 +1,6 @@
-package com.zh.boot.launch.dao;
+package com.zh.boot.launch.jpa.testdb;
 
-import com.zh.boot.launch.dao.common.BaseRepository;
-import com.zh.boot.launch.entities.Article;
+import com.zh.boot.launch.jpa.common.BaseRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

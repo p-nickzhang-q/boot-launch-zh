@@ -1,4 +1,4 @@
-package com.zh.boot.launch.entities;
+package com.zh.boot.launch.jpa.testdb;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

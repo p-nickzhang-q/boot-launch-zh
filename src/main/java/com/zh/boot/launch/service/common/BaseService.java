@@ -2,7 +2,7 @@ package com.zh.boot.launch.service.common;
 
 
 import com.google.common.collect.Lists;
-import com.zh.boot.launch.dao.common.BaseRepository;
+import com.zh.boot.launch.jpa.common.BaseRepository;
 import com.zh.boot.launch.exceptions.ValidationException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.zh.boot.launch.controller;
 
 import com.zh.boot.launch.entities.AjaxResponse;
-import com.zh.boot.launch.entities.Article;
+import com.zh.boot.launch.jpa.testdb.Article;
 import com.zh.boot.launch.entities.ArticleVO;
 import com.zh.boot.launch.exceptions.NotFoundException;
 import com.zh.boot.launch.service.ArticleService;

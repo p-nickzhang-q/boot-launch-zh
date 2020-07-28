@@ -1,4 +1,4 @@
-package com.zh.boot.launch.dao.common;
+package com.zh.boot.launch.jpa.common;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
