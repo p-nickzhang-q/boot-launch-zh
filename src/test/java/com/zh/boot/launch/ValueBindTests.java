@@ -1,5 +1,6 @@
 package com.zh.boot.launch;
 
+import com.zh.boot.launch.entities.Employee;
 import com.zh.boot.launch.entities.Family;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,9 +16,18 @@ public class ValueBindTests {
     @Resource
     Family family;
 
+    @Resource
+    Employee employee;
+
     @Test
     public void valueBindTests() throws Exception {
         System.out.println(family.toString());
+
+    }
+
+    @Test
+    public void valueBindTests2() throws Exception {
+        System.out.println(employee.toString());
 
     }
 }
