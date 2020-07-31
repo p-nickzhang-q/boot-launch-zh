@@ -1,39 +1,49 @@
 package com.zh.boot.launch.controller;
 
 import com.zh.boot.launch.entities.AjaxResponse;
-import com.zh.boot.launch.entities.Article;
+import com.zh.boot.launch.entities.ArticleVO;
+import com.zh.boot.launch.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Slf4j
 @RestController
 @RequestMapping("/articles")
 public class ArticleController {
 
+    @Autowired
+    ArticleService articleService;
 
     @PostMapping
-    public AjaxResponse saveArticle(@RequestBody Article article) {
-        log.info("save:" + article);
+    public AjaxResponse saveArticle(@RequestBody ArticleVO article) {
+        articleService.saveArticle(article);
         return AjaxResponse.success();
     }
 
     @GetMapping("/{id}")
     public AjaxResponse getArticle(@PathVariable Long id) {
-        Article article = Article.builder().id(id).author("zh").content("test").createTime(System.currentTimeMillis())
-                .title("t1").build();
-        log.info("article:" + article);
+        ArticleVO article = articleService.getArticle(id);
         return AjaxResponse.success(article);
     }
 
+    @GetMapping
+    public AjaxResponse getAllArticles() {
+        List<ArticleVO> all = articleService.getAll();
+        return AjaxResponse.success(all);
+    }
+
     @PutMapping
-    public AjaxResponse updateArticle(@RequestBody Article article) {
-        log.info("updateArticle:" + article);
+    public AjaxResponse updateArticle(@RequestBody ArticleVO article) {
+        articleService.updateArticle(article);
         return AjaxResponse.success();
     }
 
     @DeleteMapping("/{id}")
     public AjaxResponse deleteArticle(@PathVariable Long id) {
-        log.info("deleteArticle:" + id);
+        articleService.deleteArticle(id);
         return AjaxResponse.success();
     }
 }
