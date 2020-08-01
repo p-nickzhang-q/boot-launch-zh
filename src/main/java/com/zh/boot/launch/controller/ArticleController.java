@@ -1,6 +1,6 @@
 package com.zh.boot.launch.controller;
 
-import com.zh.boot.launch.entities.AjaxResponse;
+import com.zh.boot.launch.config.exception.AjaxResponse;
 import com.zh.boot.launch.entities.ArticleVO;
 import com.zh.boot.launch.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
