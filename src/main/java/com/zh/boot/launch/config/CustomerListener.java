@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebListener;
  */
 @WebListener
 @Slf4j
-public class Customlister implements ServletRequestListener {
+public class CustomerListener implements ServletRequestListener {
 
     @Override
     public void requestDestroyed(ServletRequestEvent sre) {
