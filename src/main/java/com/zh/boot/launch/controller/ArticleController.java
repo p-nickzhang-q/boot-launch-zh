@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Slf4j
@@ -18,7 +19,7 @@ public class ArticleController {
     ArticleService articleService;
 
     @PostMapping
-    public AjaxResponse saveArticle(@RequestBody ArticleVO article) {
+    public AjaxResponse saveArticle(@Valid @RequestBody ArticleVO article) {
         articleService.saveArticle(article);
         return AjaxResponse.success();
     }
@@ -36,7 +37,7 @@ public class ArticleController {
     }
 
     @PutMapping
-    public AjaxResponse updateArticle(@RequestBody ArticleVO article) {
+    public AjaxResponse updateArticle(@Valid @RequestBody ArticleVO article) {
         articleService.updateArticle(article);
         return AjaxResponse.success();
     }
